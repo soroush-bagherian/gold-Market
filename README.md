@@ -6,7 +6,7 @@
 
 ## 🧭 Architecture Diagram
 
-![GoldMarket Architecture](./documention/goldMarket.svg)
+![GoldMarket Architecture](./documentation/goldMarket.svg)
 
 
 ## 📦 Project Structure
