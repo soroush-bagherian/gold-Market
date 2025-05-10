@@ -21,21 +21,27 @@ let OrderingController = class OrderingController {
         this.orderingService = orderingService;
     }
     async makeOrder(body) {
-        const { orderVolume } = body;
-        console.log('Received orderValue:', orderVolume);
-        const price = await this.orderingService.getCalculatedPrice(orderVolume);
-        return {
-            meta: {
-                status: 'success',
-                message: 'Order submitted successfully',
-                timestamp: new Date().toISOString()
-            },
-            data: {
-                orderVolume,
-                price,
-                orderId: Math.floor(Math.random() * 10000),
-            }
-        };
+        try {
+            const { orderVolume } = body;
+            console.log('Received orderValue:', orderVolume);
+            const price = await this.orderingService.getCalculatedPrice(orderVolume);
+            return {
+                meta: {
+                    status: 'success',
+                    message: 'Order submitted successfully',
+                    timestamp: new Date().toISOString()
+                },
+                data: {
+                    orderVolume,
+                    price,
+                    orderId: Math.floor(Math.random() * 10000),
+                }
+            };
+        }
+        catch (makeOrderError) {
+            console.error(makeOrderError);
+            throw new common_1.HttpException('خطایی در ثبت سفارش رخ داده است', common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 };
 exports.OrderingController = OrderingController;

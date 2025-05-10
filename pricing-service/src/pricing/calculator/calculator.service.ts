@@ -36,8 +36,6 @@ export class CalculatorService implements OnModuleInit {
         //fetch price with rpc request
       }
     });
-    
-    //this.calculate(100);
 
   }
 
@@ -60,9 +58,14 @@ export class CalculatorService implements OnModuleInit {
   }
 
   async getMarketData() {
-    const result = await lastValueFrom(this.marketService.GetLatestPrice({}));
-    console.log("Market price:", result);
-    return result;
+    try {
+      const result = await lastValueFrom(this.marketService.GetLatestPrice({}));
+      console.log("Market price:", result);
+      return result;
+    } catch (error) {
+      throw new Error('Error in fetching gold price.')
+    }
+
   }
 
   async calculate(volume: number) {
@@ -72,7 +75,7 @@ export class CalculatorService implements OnModuleInit {
 
     const volumePrice = volume / 31.1035;
 
-    //TODO: calculate price according to system logic
+    //TODO: calculate price according to business logic
 
     return volumePrice.toFixed(4);;
 

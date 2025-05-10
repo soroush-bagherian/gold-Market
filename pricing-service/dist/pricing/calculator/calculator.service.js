@@ -53,9 +53,14 @@ let CalculatorService = class CalculatorService {
         }
     }
     async getMarketData() {
-        const result = await (0, rxjs_1.lastValueFrom)(this.marketService.GetLatestPrice({}));
-        console.log("Market price:", result);
-        return result;
+        try {
+            const result = await (0, rxjs_1.lastValueFrom)(this.marketService.GetLatestPrice({}));
+            console.log("Market price:", result);
+            return result;
+        }
+        catch (error) {
+            throw new Error('Error in fetching gold price.');
+        }
     }
     async calculate(volume) {
         const price = await this.getMarketData();
