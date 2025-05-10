@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package marketData;
+
+service MarketData {
+    rpc GetLatestPrice(Empty) returns (GoldPriceResponse);
+}
+
+message Empty {}
+
+message GoldPriceResponse {
+  double price = 1;
+  string currency = 2;
+  string timestamp = 3;
+}

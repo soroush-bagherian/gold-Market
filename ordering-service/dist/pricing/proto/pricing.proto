@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ordering;
+
+service ordering {
+    rpc Calculate(Empty) returns (GoldPriceResponse);
+}
+
+message Empty {}
+
+message GoldPriceResponse {
+  double price = 1;
+}

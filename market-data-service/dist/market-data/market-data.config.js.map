@@ -1,0 +1,1 @@
+{"version":3,"file":"market-data.config.js","sourceRoot":"","sources":["../../src/market-data/market-data.config.ts"],"names":[],"mappings":";;;AAAa,QAAA,WAAW,GAExB;IACE,IAAI,EAAE,SAAS;IACf,GAAG,EAAE,OAAO,CAAC,GAAG,CAAC,cAAc;IAC/B,IAAI,EAAE,OAAO,CAAC,GAAG,CAAC,eAAe;IACjC,OAAO,EAAE,OAAO,CAAC,GAAG,CAAC,kBAAkB;CACxC,CAAA"}

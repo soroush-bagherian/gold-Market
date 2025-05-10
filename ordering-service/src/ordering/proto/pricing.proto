@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pricing;
+
+service Pricing {
+  rpc Calculate(GoldCalculationRequest) returns (GoldPriceResponse);
+}
+
+message GoldCalculationRequest {
+  double volume = 1;
+}
+
+message GoldPriceResponse {
+  double calculatedPrice = 1;
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "file": "ordering.controller.js",
+    "sourceRoot": "",
+    "sources": [
+        "../../../src/ordering/ordering/ordering.controller.ts"
+    ],
+    "names": [],
+    "mappings": ";;;;;;;;;;;;AAAA,2CAAiD;AAG1C,IAAM,iBAAiB,GAAvB,MAAM,iBAAiB;IAGpB,AAAN,KAAK,CAAC,KAAK;QACP,OAAO,OAAO,CAAC;IACnB,CAAC;CAEJ,CAAA;AAPY,8CAAiB;AAGpB;IADL,IAAA,YAAG,EAAC,QAAQ,CAAC;;;;8CAGb;4BALQ,iBAAiB;IAD7B,IAAA,mBAAU,EAAC,SAAS,CAAC;GACT,iBAAiB,CAO7B"
+}
